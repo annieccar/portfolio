@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Allerta";
+    src: url("../assets/Fonts/AllertaStencil-Regular.ttf");
+  }
+  
+@font-face {
+    font-family: "Inria";
+    src: url("../assets/Fonts/InriaSans-Regular.ttf");
+  }
+
+$dark: #252422;
+$backgroundBeige: #F3EEE6;
+$beige: #ccc5B9;
+$peachGradient: linear-gradient(90deg, #EB5E28 0%, #F2A187 65.09%);
+$peach: #EB5E28;
+
+
+$bp-laptop: 1200px;
+$bp-tablet: 1024px;
+$bp-mobile: 480px;

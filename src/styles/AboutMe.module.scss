@@ -1,0 +1,74 @@
+@use "./Variables" as v;
+
+.section{
+    width:70vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .container{
+        max-width: 100%;
+        background-color: v.$backgroundBeige;
+        border-radius: 20px;
+        padding: 4em;
+        .title{
+            font-size: 60px;
+            margin-top: 0;
+        }
+        .presentation{
+            display: flex;
+            width:100%;
+            .paragraph{
+                font-family: "Inria";
+                font-size: 25px;
+                padding-right:2em;
+                width:55%;
+            }
+            .imageContainer {
+                width: 45%;
+                margin: auto;
+                border-radius: 50%;
+                .imageWrapper{
+                    height:0;
+                    padding-bottom: 100%;
+                    background: rgba(235, 94, 40);
+                    background-size: 100%;
+                    border-radius: 50%;
+             
+                    &:hover{
+                    cursor: pointer;
+                    }
+                        .photo{
+                            width:100%;
+                            border-radius: 50%;
+                            box-shadow: 10px 10px 10px 0px rgba(37, 36, 34, 0.50);
+                            opacity: 0.6;
+                            transition: opacity 0.3s ease-in-out;
+                            &:hover{
+                            opacity: 1;
+                            }
+                    }             
+            }}
+            
+            
+        }
+    }
+}
+
+@media (max-width: v.$bp-laptop){
+    .section{
+        width: 80vw;
+        .container{
+            .presentation{
+                .paragraph{
+                    font-size: 22px;
+                    width: 65%;
+                }
+                .imageContainer{
+                    width: 35%;
+                }
+            }
+        }
+       
+    }
+}

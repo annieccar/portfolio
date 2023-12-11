@@ -1,0 +1,16 @@
+@use "./Variables" as v;
+
+.container{
+    width:70vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    margin-top: 5em;
+       
+    .title{
+        text-align: left;
+        font-size: 60px;
+    }
+    
+}

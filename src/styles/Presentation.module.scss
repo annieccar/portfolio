@@ -1,0 +1,22 @@
+@use "./Variables" as v;
+
+.container{
+    width:70vw;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+  
+       
+    .title{
+        text-align: left;
+        font-size: 5em;
+       
+    }
+    .paragraph{
+        font-family: "Inria";
+        font-size: 2em;
+        color:v.$beige;
+        width:70%;
+        margin-bottom: 5em; 
+    }
+}

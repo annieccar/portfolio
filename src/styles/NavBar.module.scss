@@ -1,0 +1,60 @@
+@use "./Variables" as v;
+
+.navBar {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1em;
+    .image {
+        height: 70%;
+    }
+    .icons{
+        display: flex;
+        align-items: center;
+        gap: 2em;
+        height:100%;
+               
+        .icon {
+            color: v.$beige;
+            &:hover{
+                color:v.$peach;
+                cursor: pointer;
+            }
+        } 
+        
+        .languageBox{
+            position:relative;
+            p{
+                font-family: "Inria";
+                font-size: 1.3em;
+                              
+            } 
+            .language{
+                display: flex;
+                align-items: center;
+                height: 100%;
+                color: v.$beige;
+                &:hover{
+                    color:v.$peach;
+                    cursor: pointer;
+                } 
+            }
+            .otherLanguage{
+                position: absolute;
+                transform: translateY(-1.5em);
+                color:v.$beige;
+                opacity:0.5;
+                &:hover{
+                    color: v.$peach;
+                    cursor: pointer;
+                }
+            }
+        }
+       
+        .menu{
+            height:35%
+        }
+    }
+
+}

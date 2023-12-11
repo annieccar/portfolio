@@ -1,0 +1,132 @@
+@use "./Variables" as v;
+
+.submissionConfirmation{
+    font-family: "Inria";
+    font-weight: 700;
+    background: linear-gradient(to right, #EB5E28 0%, #F2A187 65.09%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 3em;
+}
+.section{
+    width:800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title{
+        font-size: 60px;
+    }
+    .paragraph{
+        font-family: "Inria";
+        color: v.$beige;
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 3em;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        .label{
+            font-family: "Inria";
+            color: v.$beige;
+            font-size: 1.5em;
+            margin-bottom: 1em;
+        }
+        .input{
+            background-color: v.$backgroundBeige;
+            border-radius: 10px;
+            width:100%;
+            height:50px;
+            padding:0 1em;
+            border:none;
+            margin-bottom: 1.5em;
+            outline-color: none;
+            &:focus{
+                outline: none;
+            }
+            font-family: "Inria";
+            font-size: 20px;
+            color: v.$dark;
+        }
+        .textArea{
+            background-color: v.$backgroundBeige;
+            border-radius: 10px;
+            width:100%;
+            height:150px;
+            padding:1em 1em;
+            border:none;
+            margin-bottom: 1.5em;
+            outline-color: none;
+            &:focus{
+                outline: none;
+            }
+            font-family: "Inria";
+            font-size: 20px;
+            color: v.$dark;
+        }
+        .error{
+            font-family: "Inria";
+            color: v.$peach;
+            font-size: 20px;
+            margin-bottom:1em;
+        }
+        .buttonBox{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin: 2em 0;
+          
+            .button {
+                position:relative;
+                padding:0.8em 4em;
+                border:none;
+                outline: none;
+                border-radius: 50px;
+                cursor: pointer;
+                background: v.$peachGradient;
+                isolation: isolate;
+                           
+              }
+              .button::before{
+                border-radius: 50px;
+                content: '';
+                background-color: v.$dark;
+                inset:2px;
+                position: absolute;
+                z-index:-1;
+              }
+              .button::after{
+                content: "Submit";
+                font-size: 24px;
+                font-family: 'Inria';
+                font-weight: 700;
+                background: linear-gradient(to left, #EB5E28 0%, #F2A187 65.09%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;   
+              }
+              .button:hover::before{
+                inset:0px;
+                opacity:0%;
+                
+              }
+              .button:hover::after{
+                -webkit-text-fill-color: v.$dark;
+                
+              }
+         
+          
+          
+             
+        }
+        
+    
+    }
+
+}
+
