@@ -13,11 +13,8 @@ function ProjectCardLeft({
   return (
     <section className={styles.projectCardLeft}>
       <div className={styles.imageContainer}>
-        <div
-          className={styles.imageWrapper}
-          style={{ backgroundImage: `url(${photo})` }}
-        >
-          <div className={styles.overlay}></div>
+        <div className={styles.imageWrapper}>
+          <img src={photo} className={styles.photo} />
         </div>
       </div>
 

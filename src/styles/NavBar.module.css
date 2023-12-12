@@ -1,0 +1,61 @@
+@font-face {
+  font-family: "Allerta";
+  src: url("../assets/Fonts/AllertaStencil-Regular.ttf");
+}
+@font-face {
+  font-family: "Inria";
+  src: url("../assets/Fonts/InriaSans-Regular.ttf");
+}
+.navBar {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 1em;
+}
+.navBar .image {
+  height: 70%;
+}
+.navBar .icons {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  height: 100%;
+}
+.navBar .icons .icon {
+  color: #ccc5B9;
+}
+.navBar .icons .icon:hover {
+  color: #EB5E28;
+  cursor: pointer;
+}
+.navBar .icons .languageBox {
+  position: relative;
+}
+.navBar .icons .languageBox p {
+  font-family: "Inria";
+  font-size: 1.3em;
+}
+.navBar .icons .languageBox .language {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: #ccc5B9;
+}
+.navBar .icons .languageBox .language:hover {
+  color: #EB5E28;
+  cursor: pointer;
+}
+.navBar .icons .languageBox .otherLanguage {
+  position: absolute;
+  transform: translateY(-1.5em);
+  color: #ccc5B9;
+  opacity: 0.5;
+}
+.navBar .icons .languageBox .otherLanguage:hover {
+  color: #EB5E28;
+  cursor: pointer;
+}
+.navBar .icons .menu {
+  height: 35%;
+}/*# sourceMappingURL=NavBar.module.css.map */

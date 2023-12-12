@@ -1,0 +1,9 @@
+
+@use "./Variables" as v;
+
+.menu{
+    width:40vw;
+    .item{
+        color: v.$beige;
+    }
+}

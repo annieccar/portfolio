@@ -57,15 +57,18 @@
 
 @media (max-width: v.$bp-laptop){
     .section{
-        width: 80vw;
+        width: 70vw;
         .container{
+            .title{
+                font-size: 50px;  
+            }
             .presentation{
                 .paragraph{
-                    font-size: 22px;
-                    width: 65%;
+                    font-size: 19px;
+                    width: 60%;
                 }
                 .imageContainer{
-                    width: 35%;
+                    width: 40%;
                 }
             }
         }

@@ -1,0 +1,112 @@
+@font-face {
+  font-family: "Allerta";
+  src: url("../assets/Fonts/AllertaStencil-Regular.ttf");
+}
+@font-face {
+  font-family: "Inria";
+  src: url("../assets/Fonts/InriaSans-Regular.ttf");
+}
+.projectCardRight {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 2em;
+}
+.projectCardRight .imageContainer {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.projectCardRight .imageContainer .imageWrapper {
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.projectCardRight .imageContainer .imageWrapper .photo {
+  width: 100%;
+  border-radius: inherit;
+  vertical-align: top;
+}
+.projectCardRight .imageContainer .imageWrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #EB5E28;
+  opacity: 0.4;
+  z-index: 1;
+}
+.projectCardRight .imageContainer :hover.imageWrapper::after {
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+.projectCardRight .infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  width: 50%;
+  gap: 1.5em;
+}
+.projectCardRight .infos .title {
+  font-size: 35px;
+  margin: 0;
+  padding-right: 0.5em;
+}
+.projectCardRight .infos .description {
+  text-align: end;
+  background-color: #F3EEE6;
+  font-family: "Inria";
+  font-size: 18px;
+  padding: 1.5em;
+  border-radius: 20px;
+  width: 95%;
+  z-index: 1;
+}
+.projectCardRight .infos .technoBox {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.projectCardRight .infos .technoBox .techno {
+  font-family: "Inria";
+  font-weight: 700px;
+  font-size: 22px;
+  color: #ccc5B9;
+  margin: 0;
+}
+.projectCardRight .infos .icons {
+  font-weight: 700;
+  padding-right: 0.5em;
+}
+.projectCardRight .infos .icons .link {
+  margin-left: 1em;
+  color: #ccc5B9;
+}
+.projectCardRight .infos .icons .link:hover {
+  color: #EB5E28;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .projectCardRight .imageContainer {
+    width: 60%;
+  }
+  .projectCardRight .infos {
+    gap: 1em;
+  }
+  .projectCardRight .infos .title {
+    font-size: 25px;
+  }
+  .projectCardRight .infos .description {
+    font-size: 15px;
+    padding: 1.5em;
+    width: 100%;
+  }
+  .projectCardRight .infos .technoBox .techno {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=ProjectCardRight.module.css.map */

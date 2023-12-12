@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "Allerta";
+  src: url("../assets/Fonts/AllertaStencil-Regular.ttf");
+}
+@font-face {
+  font-family: "Inria";
+  src: url("../assets/Fonts/InriaSans-Regular.ttf");
+}
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #252422;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Allerta";
+  width: -moz-fit-content;
+  width: fit-content;
+  background: linear-gradient(90deg, #EB5E28 0%, #F2A187 65.09%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}/*# sourceMappingURL=App.css.map */

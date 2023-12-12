@@ -1,0 +1,116 @@
+@font-face {
+  font-family: "Allerta";
+  src: url("../assets/Fonts/AllertaStencil-Regular.ttf");
+}
+@font-face {
+  font-family: "Inria";
+  src: url("../assets/Fonts/InriaSans-Regular.ttf");
+}
+.projectCardLeft {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+  justify-content: center;
+  margin: 10em 0;
+}
+.projectCardLeft .imageContainer {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.projectCardLeft .imageContainer .imageWrapper {
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+.projectCardLeft .imageContainer .imageWrapper .photo {
+  width: 100%;
+  border-radius: inherit;
+  vertical-align: top;
+}
+.projectCardLeft .imageContainer .imageWrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #EB5E28;
+  opacity: 0.4;
+  z-index: 1;
+}
+.projectCardLeft .imageContainer :hover.imageWrapper::after {
+  opacity: 0;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+.projectCardLeft .infos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  width: 50%;
+  gap: 1.5em;
+}
+.projectCardLeft .infos .title {
+  font-size: 35px;
+  margin: 0;
+  padding-left: 0.5em;
+}
+.projectCardLeft .infos .description {
+  text-align: start;
+  background-color: #F3EEE6;
+  font-family: "Inria";
+  font-size: 18px;
+  padding: 1.5em;
+  border-radius: 20px;
+  width: 95%;
+  z-index: 1;
+}
+.projectCardLeft .infos .technoBox {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+.projectCardLeft .infos .technoBox .techno {
+  font-family: "Inria";
+  font-weight: 700px;
+  font-size: 22px;
+  color: #ccc5B9;
+  margin: 0;
+}
+.projectCardLeft .infos .icons {
+  font-weight: 700;
+  padding-right: 0.5em;
+}
+.projectCardLeft .infos .icons .link {
+  margin-left: 1em;
+  color: #ccc5B9;
+}
+.projectCardLeft .infos .icons .link:hover {
+  color: #EB5E28;
+  cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+  .projectCardLeft {
+    margin: 7em 0;
+  }
+  .projectCardLeft .imageContainer {
+    width: 60%;
+  }
+  .projectCardLeft .infos {
+    gap: 1em;
+  }
+  .projectCardLeft .infos .title {
+    font-size: 25px;
+  }
+  .projectCardLeft .infos .description {
+    font-size: 15px;
+    padding: 1.5em;
+    width: 100%;
+  }
+  .projectCardLeft .infos .technoBox .techno {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=ProjectCardLeft.module.css.map */

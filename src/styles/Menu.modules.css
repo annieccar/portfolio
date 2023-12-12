@@ -1,0 +1,14 @@
+@font-face {
+  font-family: "Allerta";
+  src: url("../assets/Fonts/AllertaStencil-Regular.ttf");
+}
+@font-face {
+  font-family: "Inria";
+  src: url("../assets/Fonts/InriaSans-Regular.ttf");
+}
+.menu {
+  width: 40vw;
+}
+.menu .item {
+  color: #ccc5B9;
+}/*# sourceMappingURL=Menu.modules.css.map */
