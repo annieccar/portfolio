@@ -22,6 +22,7 @@
                 &:hover{
                     color:v.$peach;
                     cursor: pointer;
+                    transform: scale(1.1)
                 }
             } 
             
@@ -40,6 +41,7 @@
                     &:hover{
                         color:v.$peach;
                         cursor: pointer;
+                        transform: scale(1.1)
                     } 
                 }
                 .otherLanguage{
@@ -80,12 +82,15 @@
             font-weight: 800;
             width:fit-content;
             text-decoration: none;
+           
             &:hover{
                 cursor: pointer;
                 background: v.$peachGradient;
                 background-clip: text;
                 -webkit-background-clip: text;
                 -webkit-text-fill-color: transparent;
+                transform: scale(1.2);
+                transition: transform 0.3s ease;
             }
             margin: 0.3em 0;
         }

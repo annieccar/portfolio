@@ -17,7 +17,9 @@
             position: relative;
             border-radius: 20px;
             overflow: hidden;
-           
+            &:hover{
+                z-index: 3;
+            }
             .photo{
                 width: 100%;
                 border-radius: inherit;
@@ -39,9 +41,7 @@
         }
         
     }
-    :hover.imageContainer{
-        z-index: 3;
-    }
+    
    
     .infos{
         display:flex;
@@ -78,7 +78,9 @@
             }
         }
         .icons{
-            
+            display: flex;
+            align-items: center;
+            height:100%;
             font-weight: 700;
             padding-right: 0.5em;
             .link{
@@ -87,10 +89,41 @@
                 &:hover{
                     color:v.$peach;
                     cursor: pointer;
+                    transform: scale(1.1);
                 }
             }
         }
         
+    }
+}
+
+.animatePhoto{
+    animation-duration: 2s;
+    animation-name: animate-photo;
+}
+
+@keyframes animate-photo{
+    0%{
+        transform: translate(-100%);
+        opacity:0;
+    }
+    100%{
+        transform: translate(0);
+    }
+}
+
+.animateInfo{
+    animation-duration: 2s;
+    animation-name: animate-info;
+}
+
+@keyframes animate-info{
+    0%{
+        transform: translate(100%);
+        opacity:0;
+    }
+    100%{
+        transform: translate(0);
     }
 }
 

@@ -8,10 +8,11 @@ import { CgMenuRight } from "react-icons/cg";
 import { IoCloseCircleOutline } from "react-icons/io5";
 
 import styles from "../styles/NavBar.module.scss";
+import { useLanguageContext } from "../contexts/LanguageContext";
 
 function NavBar() {
   const [languageSelected, setLanguageSelected] = useState(false);
-  const [language, setLanguage] = useState("english");
+  const { language, setLanguage } = useLanguageContext();
   const [menuOpen, setMenuOpen] = useState(false);
 
   const changeLanguage = () => {

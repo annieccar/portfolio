@@ -90,6 +90,9 @@
                 cursor: pointer;
                 background: v.$peachGradient;
                 isolation: isolate;
+                &:hover{
+                    transform: scale(1.1);
+                }
                            
               }
               .button::before{
@@ -99,6 +102,7 @@
                 inset:2px;
                 position: absolute;
                 z-index:-1;
+               
               }
               .button::after{
                 content: "Submit";
@@ -108,17 +112,21 @@
                 background: linear-gradient(to left, #EB5E28 0%, #F2A187 65.09%);
                 background-clip: text;
                 -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;   
+                -webkit-text-fill-color: transparent; 
+                 
               }
               .button:hover::before{
                 inset:0px;
                 opacity:0%;
-                
+                 
               }
               .button:hover::after{
                 -webkit-text-fill-color: v.$dark;
                 
+                
               }
+
+              
          
           
           
