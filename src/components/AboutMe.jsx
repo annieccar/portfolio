@@ -4,7 +4,7 @@ import SkillsCaroussel from "./SkillsCaroussel";
 
 function AboutMe() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="aboutMe">
       <div className={styles.container}>
         <h1 className={styles.title}>About Me</h1>
         <div className={styles.presentation}>

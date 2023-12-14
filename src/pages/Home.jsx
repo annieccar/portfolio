@@ -15,7 +15,7 @@ function Home() {
         <Presentation />
         <AboutMe />
         <Projects />
-        <ContactForm/>
+        <ContactForm />
       </div>
     </>
   );

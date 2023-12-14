@@ -1,3 +1,6 @@
+import React from "react";
+import { useInView } from "react-intersection-observer";
+
 import styles from "../styles/ProjectCardRight.module.scss";
 import { FiGithub } from "react-icons/fi";
 import { FiExternalLink } from "react-icons/fi";
@@ -10,18 +13,24 @@ function ProjectCardRight({
   githubLink,
   siteLink,
 }) {
+  const { ref: projectRef, inView: projectIsVisible } = useInView();
   return (
-    <section className={styles.projectCardRight}>
-      <div className={styles.imageContainer}>
-        <div
-          className={styles.imageWrapper}
-          style={{ backgroundImage: `url(${photo})` }}
-        >
-          <div className={styles.overlay}></div>
+    <section ref={projectRef} className={styles.projectCardRight}>
+      <div
+        className={`${styles.imageContainer} ${
+          projectIsVisible ? styles.animatePhoto : ""
+        }`}
+      >
+        <div className={styles.imageWrapper}>
+          <img src={photo} className={styles.photo} />
         </div>
       </div>
 
-      <div className={styles.infos}>
+      <div
+        className={`${styles.infos} ${
+          projectIsVisible ? styles.animateInfo : ""
+        }`}
+      >
         <h1 className={styles.title}>{title}</h1>
         <div className={styles.description}>{description}</div>
         <div className={styles.technoBox}>

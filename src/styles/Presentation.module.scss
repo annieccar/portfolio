@@ -16,7 +16,21 @@
         font-family: "Inria";
         font-size: 2em;
         color:v.$beige;
-        width:70%;
+        width:80%;
         margin-bottom: 5em; 
     }
 }
+
+@media (max-width: v.$bp-laptop){
+    .container{  
+        .title{    
+            font-size: 4em;
+        }
+        .paragraph{
+            font-size: 1.7em;
+            margin-bottom: 4em; 
+        }
+    }
+}
+
+
