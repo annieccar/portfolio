@@ -23,7 +23,11 @@ function AboutMe() {
           </p>
           <div className={styles.imageContainer}>
             <div className={styles.imageWrapper}>
-              <img src={photo} className={styles.photo} />
+              <img
+                src={photo}
+                className={styles.photo}
+                alt="Photo of Annie showing face and shoulders"
+              />
             </div>
           </div>
         </div>

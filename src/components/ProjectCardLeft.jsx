@@ -23,7 +23,11 @@ function ProjectCardLeft({
         }`}
       >
         <div className={styles.imageWrapper}>
-          <img src={photo} className={styles.photo} />
+          <img
+            src={photo}
+            className={styles.photo}
+            alt={`Homepage of ${title} website`}
+          />
         </div>
       </div>
 
