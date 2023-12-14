@@ -14,7 +14,7 @@ function ContactForm() {
     );
   }
   return (
-    <div className={styles.section}>
+    <div className={styles.section} id="contact">
       <h1 className={styles.title}>Get in touch</h1>
       <p className={styles.paragraph}>
         I am always interested in hearing about new opportunities. If you’d like

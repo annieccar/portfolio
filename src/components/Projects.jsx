@@ -28,7 +28,7 @@ function Projects() {
   };
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="projects">
       <h1 className={styles.title}>My Projects</h1>
       <ProjectCardRight {...originDigital} />
       <ProjectCardLeft {...bumpToBundle} />

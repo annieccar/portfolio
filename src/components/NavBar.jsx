@@ -5,9 +5,9 @@ import { VscGithubAlt } from "react-icons/vsc";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { IoIosArrowDown } from "react-icons/io";
 import { CgMenuRight } from "react-icons/cg";
+import { IoCloseCircleOutline } from "react-icons/io5";
 
 import styles from "../styles/NavBar.module.scss";
-import Menu from "./Menu";
 
 function NavBar() {
   const [languageSelected, setLanguageSelected] = useState(false);
@@ -21,7 +21,7 @@ function NavBar() {
   };
 
   return (
-    <>
+    <div className={styles.window}>
       <nav className={styles.navBar}>
         <img
           className={styles.image}
@@ -69,8 +69,56 @@ function NavBar() {
           </div>
         </div>
       </nav>
-      {menuOpen && <Menu setMenuOpen={setMenuOpen} />}
-    </>
+      {menuOpen && (
+        <>
+          <div className={styles.menu}>
+            <a
+              href="#aboutMe"
+              className={styles.item}
+              onClick={() => {
+                setMenuOpen(false);
+              }}
+            >
+              About me
+            </a>
+            <a
+              href="#projects"
+              className={styles.item}
+              onClick={() => {
+                setMenuOpen(false);
+              }}
+            >
+              My projects
+            </a>
+            <a
+              className={styles.item}
+              onClick={() => {
+                setMenuOpen(false);
+              }}
+            >
+              Resume
+            </a>
+            <a
+              href="#contact"
+              className={styles.item}
+              onClick={() => {
+                setMenuOpen(false);
+              }}
+            >
+              Contact me
+            </a>
+          </div>
+          <div className={styles.closeButton}>
+            <IoCloseCircleOutline
+              size={40}
+              onClick={() => {
+                setMenuOpen(false);
+              }}
+            />
+          </div>
+        </>
+      )}
+    </div>
   );
 }
 

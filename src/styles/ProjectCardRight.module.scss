@@ -39,6 +39,9 @@
         }
         
     }
+    :hover.imageContainer{
+        z-index: 3;
+    }
    
     .infos{
         display:flex;

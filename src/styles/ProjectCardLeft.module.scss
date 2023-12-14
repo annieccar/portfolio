@@ -24,6 +24,7 @@
                 border-radius: inherit;
                 vertical-align: top;
             }
+            
         }
         .imageWrapper::after{
             content:"";
@@ -39,6 +40,10 @@
             transition: opacity 0.3s ease-in-out;
         }
         
+        
+    }
+    :hover.imageContainer{
+        z-index: 3;
     }
   
    
