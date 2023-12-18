@@ -1,6 +1,18 @@
+import { useState, useEffect } from "react";
+
 import styles from "../styles/SkillsCaroussel.module.scss";
 
 function SkillsCaroussel() {
+  const [isMobile, setIsMobile] = useState(true);
+
+  useEffect(() => {
+    if (window.innerWidth <= 500) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }, []);
+
   const skills = [
     "React",
     "JavaScript",
@@ -20,11 +32,13 @@ function SkillsCaroussel() {
             <div className={styles.skill}>{skill}</div>
           </div>
         ))}
-        {skills.map((skill) => (
-          <div className={styles.skillBox}>
-            <div className={styles.skill}>{skill}</div>
-          </div>
-        ))}
+        {!isMobile
+          ? skills.map((skill) => (
+              <div className={styles.skillBox}>
+                <div className={styles.skill}>{skill}</div>
+              </div>
+            ))
+          : ""}
       </div>
     </div>
   );

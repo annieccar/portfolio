@@ -1,0 +1,26 @@
+@use "./Variables" as v;
+
+.resume{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, rgba(204,197,185,0.6), rgba(204,197,185,1) 60%);
+    min-height: 100vh;
+
+    .document{
+        padding:2em 0;
+    }
+      
+    .closeButton{
+        position: absolute;
+        z-index: 3;
+        top: 1em;
+        right:1em;
+        color: v.$dark;
+        &:hover{
+            cursor:pointer;
+            color: #447977;
+        }
+
+    }
+}

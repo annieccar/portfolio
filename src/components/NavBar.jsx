@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 import logo from "../assets/Images/logo.png";
 import { VscGithubAlt } from "react-icons/vsc";
@@ -21,6 +22,18 @@ function NavBar() {
     } else setLanguage("english");
   };
 
+  const navigate = useNavigate();
+
+  const [isMobile, setIsMobile] = useState(true);
+
+  useEffect(() => {
+    if (window.innerWidth <= 500) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }, []);
+
   return (
     <div className={styles.window}>
       <nav className={styles.navBar}>
@@ -30,35 +43,45 @@ function NavBar() {
           alt="The letter A surrounded by the letter C in a peach gradient color, the logo of the website"
         />
         <div className={styles.icons}>
-          <a
-            href="https://github.com/annieccar?tab=repositories"
-            className={styles.icon}
-          >
-            <VscGithubAlt size={30} />
-          </a>
-          <a
-            href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
-            className={styles.icon}
-          >
-            <SlSocialLinkedin size={30} />
-          </a>
-          <div
-            className={styles.languageBox}
-            onClick={() => setLanguageSelected(!languageSelected)}
-          >
-            <div className={styles.language}>
-              <p>{language === "english" ? "EN" : "FR"}</p>
-              <IoIosArrowDown size={20} />
+          {!isMobile ? (
+            <a
+              href="https://github.com/annieccar?tab=repositories"
+              className={styles.icon}
+            >
+              <VscGithubAlt size={30} />
+            </a>
+          ) : null}
+          {!isMobile ? (
+            <a
+              href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+              className={styles.icon}
+            >
+              <SlSocialLinkedin size={30} />
+            </a>
+          ) : (
+            ""
+          )}
+          {!isMobile ? (
+            <div
+              className={styles.languageBox}
+              onClick={() => setLanguageSelected(!languageSelected)}
+            >
+              <div className={styles.language}>
+                <p>{language === "english" ? "EN" : "FR"}</p>
+                <IoIosArrowDown size={20} />
+              </div>
+              {languageSelected && (
+                <p
+                  className={styles.otherLanguage}
+                  onClick={() => changeLanguage()}
+                >
+                  {language === "english" ? "FR" : "EN"}
+                </p>
+              )}
             </div>
-            {languageSelected && (
-              <p
-                className={styles.otherLanguage}
-                onClick={() => changeLanguage()}
-              >
-                {language === "english" ? "FR" : "EN"}
-              </p>
-            )}
-          </div>
+          ) : (
+            ""
+          )}
 
           <div className={styles.icon}>
             <CgMenuRight
@@ -70,45 +93,84 @@ function NavBar() {
           </div>
         </div>
       </nav>
-      {menuOpen && (
-        <>
-          <div className={styles.menu}>
-            <a
-              href="#aboutMe"
-              className={styles.item}
-              onClick={() => {
-                setMenuOpen(false);
-              }}
-            >
-              About me
-            </a>
-            <a
-              href="#projects"
-              className={styles.item}
-              onClick={() => {
-                setMenuOpen(false);
-              }}
-            >
-              My projects
-            </a>
-            <a
-              className={styles.item}
-              onClick={() => {
-                setMenuOpen(false);
-              }}
-            >
-              Resume
-            </a>
-            <a
-              href="#contact"
-              className={styles.item}
-              onClick={() => {
-                setMenuOpen(false);
-              }}
-            >
-              Contact me
-            </a>
+      {menuOpen ? (
+        <div className={styles.menu}>
+          <div className={styles.icons}>
+            {isMobile ? (
+              <a
+                href="https://github.com/annieccar?tab=repositories"
+                className={styles.icon}
+              >
+                <VscGithubAlt size={30} />
+              </a>
+            ) : (
+              ""
+            )}
+            {isMobile ? (
+              <a
+                href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+                className={styles.icon}
+              >
+                <SlSocialLinkedin size={30} />
+              </a>
+            ) : (
+              ""
+            )}
           </div>
+          <a
+            href="#aboutMe"
+            className={styles.item}
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
+            About me
+          </a>
+          <a
+            href="#projects"
+            className={styles.item}
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
+            My projects
+          </a>
+          <a
+            className={styles.item}
+            onClick={() => {
+              navigate("/resume");
+            }}
+          >
+            Resume
+          </a>
+          <a
+            href="#contact"
+            className={styles.item}
+            onClick={() => {
+              setMenuOpen(false);
+            }}
+          >
+            Contact me
+          </a>
+          {isMobile ? (
+            <div
+              className={styles.languageBox}
+              onClick={() => setLanguageSelected(!languageSelected)}
+            >
+              <p className={styles.language}>
+                {language === "english" ? "EN" : "FR"}
+              </p>
+
+              <p
+                className={styles.otherLanguage}
+                onClick={() => changeLanguage()}
+              >
+                {language === "english" ? "FR" : "EN"}
+              </p>
+            </div>
+          ) : (
+            ""
+          )}
           <div className={styles.closeButton}>
             <IoCloseCircleOutline
               size={40}
@@ -117,7 +179,9 @@ function NavBar() {
               }}
             />
           </div>
-        </>
+        </div>
+      ) : (
+        ""
       )}
     </div>
   );

@@ -24,3 +24,14 @@
         
     }
 }
+
+@media (max-width: v.$bp-mobile){
+    .container{     
+        margin-top: 3em; 
+        width:80vw;
+        .title{
+            font-size: 40px;
+        }
+        
+    }
+}

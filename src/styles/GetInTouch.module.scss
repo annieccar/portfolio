@@ -190,3 +190,26 @@
     } 
 }
 
+@media (max-width: v.$bp-mobile){
+    .submissionConfirmation{
+        margin-bottom: 1em;
+    }
+    .section{
+        width:100vw;  
+        .title{
+            font-size: 40px;
+        }
+        .paragraph{
+            font-size: 18px;
+            margin-bottom: 2em;
+            width:80%;
+        }
+        .form { 
+            width: 80%;
+            .label{
+                font-size: 1em;
+            }            
+        }
+    } 
+}
+

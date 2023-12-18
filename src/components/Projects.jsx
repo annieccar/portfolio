@@ -1,10 +1,23 @@
+import { useState, useEffect } from "react";
+
 import styles from "../styles/Projects.module.scss";
 import OD from "../assets/Images/originsDigital.png";
 import BTB from "../assets/Images/bumpToBundle.png";
 import ProjectCardRight from "./ProjectCardRight";
 import ProjectCardLeft from "./ProjectCardLeft";
+import ProjectCardMobile from "./ProjectCardMobile";
 
 function Projects() {
+  const [isMobile, setIsMobile] = useState(true);
+
+  useEffect(() => {
+    if (window.innerWidth <= 500) {
+      setIsMobile(true);
+    } else {
+      setIsMobile(false);
+    }
+  }, []);
+
   const originDigital = {
     photo: OD,
     title: "Origins Digital",
@@ -30,8 +43,17 @@ function Projects() {
   return (
     <section className={styles.container} id="projects">
       <h1 className={styles.title}>My Projects</h1>
-      <ProjectCardRight {...originDigital} />
-      <ProjectCardLeft {...bumpToBundle} />
+      {!isMobile ? (
+        <>
+          <ProjectCardRight {...originDigital} />
+          <ProjectCardLeft {...bumpToBundle} />
+        </>
+      ) : (
+        <>
+          <ProjectCardMobile {...bumpToBundle} />
+          <ProjectCardMobile {...originDigital} />
+        </>
+      )}
     </section>
   );
 }

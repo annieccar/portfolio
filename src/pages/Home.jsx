@@ -17,7 +17,7 @@ function Home() {
         <AboutMe />
         <Projects />
         <ContactForm />
-        <Footer/>
+        <Footer />
       </div>
     </>
   );

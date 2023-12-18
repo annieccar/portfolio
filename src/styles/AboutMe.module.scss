@@ -75,3 +75,36 @@
        
     }
 }
+
+@media (max-width: v.$bp-mobile){
+    .section{
+       width:100%;
+        .container{
+            width:80%;
+            padding:2em 1em;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .title{
+                font-size: 40px;  
+            }
+            .presentation{
+                flex-direction: column-reverse;
+                align-items: center;
+                width:100%;
+                .paragraph{
+                    font-size: 18px;
+                    width: 90%;
+                    text-align: center;
+                    padding-right: 0;
+                }
+                .imageContainer{
+                    width: 70%;
+                }
+            }
+        }
+       
+    }
+}
+
