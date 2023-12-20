@@ -17,13 +17,19 @@ function Resume() {
   const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(true);
 
-  useEffect(() => {
+  const handleResize = () => {
     if (window.innerWidth <= 480) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
     }
+  };
+
+  useEffect(() => {
+    handleResize();
   }, []);
+
+  window.addEventListener("resize", handleResize);
 
   return (
     <div className={styles.resume}>

@@ -1,118 +1,134 @@
 @use "./Variables" as v;
 
-.projectCardLeft{
-
-    display: flex;
-    flex-direction: column;
+.fixedContainer{
+    position: fixed;
+    inset:0;
+    z-index: 3;
     width: 100%;
+    height: 100%;
+    background: rgba(37,34,34,0.9);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    margin-bottom: 4em;
-    border: solid 2px v.$beige;
-    border-radius: 10px;    
+    animation-duration: 2s;
+    animation-name: increase-opacity;
+  
+ 
+    .projectCardLeft{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        justify-content: center;
+        border-radius: 10px;
+        background-color: v.$backgroundBeige; 
         
-   
-
-        .imageContainer {
-            
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-                   
-            .imageWrapper{
-                box-sizing: border-box;
-                width:100%;
-                position: relative;
-                border-radius: 10px;
-                overflow: hidden;
-                padding:1em;
-                .photo{
-                    width: 100%;
-                    border-radius: inherit;
-                    vertical-align: top;
+        .closeButton{
+            position: absolute;
+            z-index: 3;
+            top: 0.5em;
+            right:0.5em;
+            color: v.$dark;
+        }
+       
+    
+            .imageContainer {
+                
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                       
+                .imageWrapper{
+                    box-sizing: border-box;
+                    width:100%;
+                    position: relative;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    padding:1em;
+                    .photo{
+                        width: 100%;
+                        border-radius: inherit;
+                        vertical-align: top;
+                        box-shadow: 8px 8px 8px rgba(37, 36, 34, 0.50);
+                    }
+                    
                 }
+               
                 
             }
            
+            .title{
+                font-size: 25px;
+                margin:0.5em 1em;
+            }
+            .description{
+                text-align: start;
+                color:v.$dark;
+                font-family: "Inria";
+                font-size: 15px;
+                padding: 1em;
+                border-radius: 20px ;
+             
+            }
+            .technoContainer{
+                display:flex;
+                flex-wrap: wrap;
+                justify-content: start;
+                margin: 0.5em 0.5em;
+                margin-bottom: 1em;
+
+                .technoBox{
+                    background: v.$dark;
+                    border-radius: 50px;
+                    margin: 0.5em 0.5em;
+                     box-shadow: 8px 8px 8px rgba(37, 36, 34, 0.50);
+                    .techno{
+                        font-family: "Inria";
+                        font-weight: 700;
+                        font-size: 15px;
+                        color: v.$dark;
+                        background: v.$peachGradient;
+                        background-clip: text;
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        padding: 0.5em 0.8em ;
+                        margin:0;
+                    }
+                }
+                                     
+                
+            }
+            .icons{
+                display: flex;
+                align-items: center;
+                height:100%;
+                font-weight: 700;
+                padding-right: 0.5em;
+                padding-bottom: 0.5em;
+                .link{
+                    margin-left:1em;
+                    color: v.$dark;
+                }
+            }
             
         }
-       
-        .title{
-            font-size: 25px;
-            margin:0.5em 1em;
-        }
-        .description{
-            text-align: start;
-            color:v.$beige;
-            font-family: "Inria";
-            font-size: 15px;
-            padding: 1em;
-            border-radius: 20px ;
-         
-        }
-        .technoBox{
-            display:flex;
-            flex-wrap: wrap;
-            justify-content: start;
-            margin: 0.5em 0.5em;
-                                 
-            .techno{
-                background: v.$peachGradient;
-                font-family: "Inria";
-                font-weight: 700px;
-                font-size: 15px;
-                color: v.$dark;
-                border-radius: 10px;
-                padding: 0.2em 0.5em ;
-                margin: 0.5em 0.5em;
-            }
-        }
-        .icons{
-            display: flex;
-            align-items: center;
-            height:100%;
-            font-weight: 700;
-            padding-right: 0.5em;
-            padding-bottom: 0.5em;
-            .link{
-                margin-left:1em;
-                color: v.$beige;
-               
-            }
-        }
-        
-    }
 
-
-.animatePhoto{
-    animation-duration: 2s;
-    animation-name: animate-photo;
 }
 
-@keyframes animate-photo{
-    0%{
-        transform: translate(100%);
+
+
+@keyframes increase-opacity{
+    0%{    
         opacity:0;
     }
     100%{
-        transform: translate(0);
+        opacity:1;
     }
 }
 
-.animateInfo{
-    animation-duration: 2s;
-    animation-name: animate-info;
-}
 
-@keyframes animate-info{
-    0%{
-        transform: translate(-100%);
-        opacity:0;
-    }
-    100%{
-        transform: translate(0);
-    }
-}
 
 
  

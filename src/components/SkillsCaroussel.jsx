@@ -5,13 +5,19 @@ import styles from "../styles/SkillsCaroussel.module.scss";
 function SkillsCaroussel() {
   const [isMobile, setIsMobile] = useState(true);
 
-  useEffect(() => {
-    if (window.innerWidth <= 500) {
+  const handleResize = () => {
+    if (window.innerWidth <= 1024) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
     }
+  };
+
+  useEffect(() => {
+    handleResize();
   }, []);
+
+  window.addEventListener("resize", handleResize);
 
   const skills = [
     "React",
@@ -28,7 +34,7 @@ function SkillsCaroussel() {
     <div className={styles.caroussel}>
       <div className={styles.scroller_inner}>
         {skills.map((skill) => (
-          <div className={styles.skillBox}>
+          <div className={styles.skillBox} key={skill}>
             <div className={styles.skill}>{skill}</div>
           </div>
         ))}

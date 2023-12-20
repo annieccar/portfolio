@@ -4,7 +4,6 @@ import styles from "../styles/GetInTouch.module.scss";
 
 function ContactForm() {
   const [state, handleSubmit] = useForm("mnqkvell");
-  console.log(state);
 
   if (state.succeeded) {
     return (

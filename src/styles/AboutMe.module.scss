@@ -13,14 +13,14 @@
         padding: 4em;
         .title{
             font-size: 60px;
-            margin-top: 0;
+            margin: 0;
         }
         .presentation{
             display: flex;
             width:100%;
             .paragraph{
                 font-family: "Inria";
-                font-size: 25px;
+                font-size: 22px;
                 padding-right:2em;
                 width:55%;
             }
@@ -60,11 +60,12 @@
         width: 70vw;
         .container{
             .title{
-                font-size: 50px;  
+                font-size: 50px;
+              
             }
             .presentation{
                 .paragraph{
-                    font-size: 19px;
+                    font-size: 18px;
                     width: 60%;
                 }
                 .imageContainer{
@@ -76,9 +77,9 @@
     }
 }
 
-@media (max-width: v.$bp-mobile){
+@media (max-width: v.$bp-tablet){
     .section{
-       width:100%;
+        width: 90vw;
         .container{
             width:80%;
             padding:2em 1em;

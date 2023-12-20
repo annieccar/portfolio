@@ -26,13 +26,19 @@ function NavBar() {
 
   const [isMobile, setIsMobile] = useState(true);
 
-  useEffect(() => {
-    if (window.innerWidth <= 500) {
+  const handleResize = () => {
+    if (window.innerWidth <= 480) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
     }
+  };
+
+  useEffect(() => {
+    handleResize();
   }, []);
+
+  window.addEventListener("resize", handleResize);
 
   return (
     <div className={styles.window}>

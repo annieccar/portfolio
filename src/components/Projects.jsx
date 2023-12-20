@@ -6,17 +6,24 @@ import BTB from "../assets/Images/bumpToBundle.png";
 import ProjectCardRight from "./ProjectCardRight";
 import ProjectCardLeft from "./ProjectCardLeft";
 import ProjectCardMobile from "./ProjectCardMobile";
+import ProjectCaroussel from "./ProjectCaroussel";
 
 function Projects() {
   const [isMobile, setIsMobile] = useState(true);
 
-  useEffect(() => {
-    if (window.innerWidth <= 500) {
+  const handleResize = () => {
+    if (window.innerWidth <= 800) {
       setIsMobile(true);
     } else {
       setIsMobile(false);
     }
+  };
+
+  useEffect(() => {
+    handleResize();
   }, []);
+
+  window.addEventListener("resize", handleResize);
 
   const originDigital = {
     photo: OD,
@@ -49,10 +56,7 @@ function Projects() {
           <ProjectCardLeft {...bumpToBundle} />
         </>
       ) : (
-        <>
-          <ProjectCardMobile {...bumpToBundle} />
-          <ProjectCardMobile {...originDigital} />
-        </>
+        <ProjectCaroussel projects={[originDigital, bumpToBundle]} />
       )}
     </section>
   );

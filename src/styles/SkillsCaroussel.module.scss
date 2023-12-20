@@ -24,7 +24,6 @@
             .skill{
                 font-size: 2em;
                 font-weight: 700;
-                background: v.$dark;
                 font-family: "Inria";
                 text-align: center;
                 white-space: nowrap;
@@ -64,7 +63,7 @@
 
 }
 
-@media (max-width: v.$bp-mobile){
+@media (max-width: v.$bp-tablet){
     .caroussel{
         margin-top: 2em;
         mask-image: none;
@@ -76,10 +75,12 @@
             flex-wrap: wrap;
             width:100%;
             justify-content: start;
+            padding-bottom:1em;
             
             .skillBox{
               min-width: fit-content;
               padding: 0.5em 1.5em;
+              box-shadow: 8px 8px 8px rgba(37, 36, 34, 0.50);
                 .skill{
                     font-size: 1.2em;
                 }
