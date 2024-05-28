@@ -4,7 +4,9 @@
     display: flex;
     width: 100%;
     justify-content: center;
-    margin-top: 2em;
+    margin-bottom: 9em;
+    
+    gap: 1em;
     .imageContainer {
         width: 50%;
         display: flex;
@@ -36,7 +38,6 @@
         }
         :hover.imageWrapper::after{
             opacity: 0;
-            cursor: pointer;
             transition: opacity 0.3s ease-in-out;
         }
         
@@ -59,22 +60,20 @@
             text-align: end;
             background-color: v.$backgroundBeige;
             font-family: "Inria";
-            font-size: 18px;
-            padding: 1.5em;
-            border-radius: 10px ;
-            width: 95%;
-            z-index: 1;
+            font-size:22px;
+            padding: 1em;
+            border-radius: 10px ;  
         }
         .technoBox{
             display:flex;
-            justify-content: space-around;
+            justify-content: end;
             width: 100%;
             .techno{
                 font-family: "Inria";
                 font-weight: 700px;
-                font-size: 22px;
+                font-size: 25px;
                 color: v.$beige;
-                margin:0;
+                margin-left:1.5em;
             }
         }
         .icons{
@@ -82,10 +81,11 @@
             align-items: center;
             height:100%;
             font-weight: 700;
-            padding-right: 0.5em;
+            
             .link{
                 margin-left:1em;
                 color: v.$beige;
+                
                 &:hover{
                     color:v.$peach;
                     cursor: pointer;
@@ -129,6 +129,7 @@
 
 @media (max-width: v.$bp-laptop){
     .projectCardRight{
+        margin-bottom: 7em;
         .imageContainer {
             width: 60%;                  
         }
@@ -139,13 +140,13 @@
                 
             }
             .description{
-                font-size: 13px;
-                padding: 1.5em; 
-                width:100%
+                font-size: 17px;
+                padding: 1em; 
+                
             }
             .technoBox{
                 .techno{
-                    font-size: 15px;
+                    font-size: 18px;
                 }
             }
         }

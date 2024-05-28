@@ -90,9 +90,7 @@
                 cursor: pointer;
                 background: v.$peachGradient;
                 isolation: isolate;
-                &:hover{
-                    transform: scale(1.1);
-                }
+               
                            
               }
               .button::before{

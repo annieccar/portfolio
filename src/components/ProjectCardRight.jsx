@@ -21,7 +21,7 @@ function ProjectCardRight({
           projectIsVisible ? styles.animatePhoto : ""
         }`}
       >
-        <div className={styles.imageWrapper}>
+        <div className={styles.imageWrapper} href={siteLink}>
           <img src={photo} className={styles.photo} />
         </div>
       </div>
