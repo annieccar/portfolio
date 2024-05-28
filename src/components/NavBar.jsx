@@ -43,11 +43,7 @@ function NavBar() {
   return (
     <div className={styles.window}>
       <nav className={styles.navBar}>
-        <img
-          className={styles.image}
-          src={logo}
-          alt="The letter A surrounded by the letter C in a peach gradient color, the logo of the website"
-        />
+        <div className={styles.logo}>AC</div>
         <div className={styles.icons}>
           {!isMobile ? (
             <a
