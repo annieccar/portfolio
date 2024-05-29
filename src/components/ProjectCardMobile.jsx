@@ -1,4 +1,5 @@
 import React from "react";
+import { useLanguageContext } from "../contexts/LanguageContext";
 
 import styles from "../styles/ProjectCardMobile.module.scss";
 import { FiGithub } from "react-icons/fi";
@@ -6,6 +7,7 @@ import { IoCloseCircleOutline } from "react-icons/io5";
 import { FiExternalLink } from "react-icons/fi";
 
 function ProjectCardMobile({ project, setProjectOpened }) {
+  const { language } = useLanguageContext();
   return (
     <div className={styles.fixedContainer}>
       <div className={styles.projectCardLeft}>
@@ -20,14 +22,21 @@ function ProjectCardMobile({ project, setProjectOpened }) {
         <h1 className={styles.title}>{project.title}</h1>
         <div className={styles.imageContainer}>
           <div className={styles.imageWrapper}>
-            <img
-              src={project.photo}
-              className={styles.photo}
-              alt={`Homepage of ${project.title} website`}
-            />
+            {project.type === "photo" ? (
+              <img src={project.photo} className={styles.photo} />
+            ) : (
+              <video controls className={styles.video}>
+                <source src={project.photoMobile} type="video/mp4" />
+                Your browser does not support the video tag
+              </video>
+            )}
           </div>
         </div>
-        <div className={styles.description}>{project.description}</div>
+        <div className={styles.description}>
+          {language === "english"
+            ? project.descriptionEnglish
+            : project.descriptionFrench}
+        </div>
         <div className={styles.technoContainer}>
           {project.technologies.map((techno) => (
             <div className={styles.technoBox}>
@@ -41,9 +50,13 @@ function ProjectCardMobile({ project, setProjectOpened }) {
           <a className={styles.link} href={project.githubLink}>
             <FiGithub size={25} />
           </a>
-          <a className={styles.link} href={project.siteLink}>
-            <FiExternalLink size={28} />
-          </a>
+          {project.siteLink ? (
+            <a className={styles.link} href={project.siteLink}>
+              <FiExternalLink size={28} />
+            </a>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </div>

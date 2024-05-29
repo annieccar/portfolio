@@ -20,7 +20,14 @@ function ProjectCaroussel({ projects }) {
           onClick={() => openProject(project)}
         >
           <div className={styles.imageWrapper}>
-            <img src={project.photo} className={styles.photo} />
+            {project.type === "photo" ? (
+              <img src={project.photo} className={styles.photo} />
+            ) : (
+              <video controls className={styles.photo}>
+                <source src={project.photo} type="video/mp4" />
+                Your browser does not support the video tag
+              </video>
+            )}
           </div>
           <div className={styles.info}>
             <p className={styles.title}>{project.title}</p>

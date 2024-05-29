@@ -21,10 +21,6 @@
             border-radius: 10px;
             overflow: hidden;
            
-            &:hover{
-                z-index: 3;  
-            }
-           
             .photo{
                 width: 100%;
                 border-radius: inherit;
@@ -42,8 +38,8 @@
         }
         :hover.imageWrapper::after{
             opacity: 0;
-            
-            transition: opacity 0.3s ease-in-out;
+            transition:  opacity 0.3s ease-in-out;
+            z-index: -1;
         }
         
     }
