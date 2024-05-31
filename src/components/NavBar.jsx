@@ -43,7 +43,20 @@ function NavBar() {
   return (
     <div className={styles.window}>
       <nav className={styles.navBar}>
-        <div className={styles.logo}>AC</div>
+        <div className={styles.info}>
+          <div className={styles.logo}>AC</div>
+          {!isMobile ? (
+            <div className={styles.contact}>anniecroteauc@gmail.com</div>
+          ) : (
+            ""
+          )}
+          {!isMobile ? (
+            <div className={styles.contact}>+33 6 23 67 15 29</div>
+          ) : (
+            ""
+          )}
+        </div>
+
         <div className={styles.icons}>
           {!isMobile ? (
             <a

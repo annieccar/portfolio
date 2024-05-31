@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 
+import { useLanguageContext } from "../contexts/LanguageContext";
+
 import styles from "../styles/Projects.module.scss";
 import OD from "../assets/Images/originsDigital.png";
 import BTB from "../assets/Images/bumpToBundle.png";
@@ -14,6 +16,8 @@ import ProjectCaroussel from "./ProjectCaroussel";
 
 function Projects() {
   const [isMobile, setIsMobile] = useState(true);
+
+  const { language } = useLanguageContext();
 
   const handleResize = () => {
     if (window.innerWidth <= 800) {
@@ -48,7 +52,7 @@ function Projects() {
     type: "photo",
     title: "Bump To Bundle",
     descriptionEnglish:
-      "This personal project aims to create a customized birthlist that can be shared with friends and family. Users can create a list where gifts are sorted by categories, and provide purchase links, photos, and details for each item. Once a gift is selected by someone, it becomes unavailable for others to choose, ensuring a unique and organized gifting experience.",
+      "This personal project aims to create a customized birthlist that can be shared with friends and family. Users can create a list where gifts are sorted by categories, and provide purchase links, photos, and details for each item. Once a gift is selected by someone, it becomes unavailable for others to choose, ensuring an organized gifting experience.",
     descriptionFrench:
       "Ce projet personnel vise à créer une liste de naissance personnalisée à partager avec des amis et la famille. Les utilisateurs peuvent créer une liste où les cadeaux sont triés par catégories et fournir des liens d'achat, des photos et des détails pour chaque article. Une fois qu'un cadeau est sélectionné par quelqu'un, il devient indisponible pour les autres, assurant ainsi une expérience de cadeau unique et organisée.",
     technologies: ["React", "Styled Components", "Express", "MySQL"],
@@ -77,7 +81,7 @@ function Projects() {
     type: "video",
     title: "Tuum Vehiculum",
     descriptionEnglish:
-      "This project was developed during a 2-day hackathon. Tasked with presenting a project that combines technology with history, we decided to create a medieval version of Uber. This platform enables users to book transportation between two cities, offering a selection of various means of travel typical of the Middle Ages. Additionally, users can choose additional options for their journey if desired.",
+      "This project was developed during a 2-day hackathon. Tasked with presenting a project that combines technology with history, we decided to create a medieval version of Uber. This platform enables users to book transportation between two cities, offering a selection of various means of travel typical of the Middle Age.",
     descriptionFrench:
       "Ce projet a été réalisé lors d'un hackathon de 2 jours. Ayant pour objectif de présenter un projet alliant technologie et histoire, nous avons choisi de créer cette version médiévale d'Uber. Cette plateforme permet à un utilisateur de réserver une course en choisissant parmi plusieurs moyens de transport entre deux villes, ainsi que de sélectionner des options supplémentaires au choix.",
     technologies: ["React", "Tailwind", "Express", "MySQL"],
@@ -87,7 +91,9 @@ function Projects() {
 
   return (
     <section className={styles.container} id="projects">
-      <h1 className={styles.title}>My Projects</h1>
+      <h1 className={styles.title}>
+        {language == "english" ? "My Projects" : "Mes projets"}
+      </h1>
       {!isMobile ? (
         <>
           <ProjectCardRight {...originDigital} />

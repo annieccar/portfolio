@@ -18,12 +18,22 @@
         .presentation{
             display: flex;
             width:100%;
-            .paragraph{
+            .presentationText{
+                width:65%;
+                .paragraph{
                 font-family: "Inria";
                 font-size: 25px;
                 padding-right:2em;
-                width:55%;
-            }
+                .link{
+                    text-decoration: underline;
+                    &:hover{
+                        cursor: pointer;
+                        color: v.$peach;
+                        }
+                    }
+                
+            }}
+            
             .imageContainer {
                 width: 35%;
                 margin: auto;
@@ -35,9 +45,7 @@
                     background-size: 100%;
                     border-radius: 50%;
              
-                    &:hover{
-                    // cursor: pointer;
-                    }
+                   
                         .photo{
                             width:100%;
                             border-radius: 50%;
@@ -64,10 +72,14 @@
               
             }
             .presentation{
-                .paragraph{
-                    font-size: 18px;
-                    width: 60%;
+                .presentationText{
+                    width:60%;
+                    .paragraph{
+                        font-size: 18px;
+                        
+                    }
                 }
+                
                 .imageContainer{
                     width: 40%;
                 }
@@ -94,12 +106,15 @@
                 flex-direction: column-reverse;
                 align-items: center;
                 width:100%;
-                .paragraph{
-                    font-size: 18px;
-                    width: 90%;
-                    text-align: center;
-                    padding-right: 0;
+                .presentationText{
+                    width:90%;
+                    .paragraph{
+                        font-size: 18px;
+                        text-align: center;
+                        padding-right: 0;
+                    }
                 }
+                
                 .imageContainer{
                     width: 70%;
                 }
