@@ -26,6 +26,7 @@
         border-radius: 10px;
         background-color: v.$backgroundBeige; 
         overflow-y: scroll;
+        z-index: 20;
         
         .title{
             font-size: 25px;
