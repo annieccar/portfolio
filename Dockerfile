@@ -6,7 +6,7 @@ WORKDIR /usr/src/app
 ENV PATH /usr/src/app/node_modules/.bin:$PATH
 ARG VITE_BACKEND_URL=${VITE_BACKEND_URL}
 ENV VITE_BACKEND_URL=${VITE_BACKEND_URL}
-COPY ./ ./usr/src/app
+COPY ../portfolio ./usr/src/app
 RUN npm install
 RUN npm run build
 
