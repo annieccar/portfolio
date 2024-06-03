@@ -13,6 +13,6 @@ RUN npm run build
 # production environment
 FROM nginx:1.15
 COPY --from=builder /usr/src/app/dist /usr/share/nginx/html
-COPY ./frontend/default.conf /etc/nginx/conf.d/
+COPY ./default.conf /etc/nginx/conf.d/
 EXPOSE 3000
 CMD ["nginx", "-g", "daemon off;"]
