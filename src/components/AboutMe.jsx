@@ -28,7 +28,7 @@ function AboutMe() {
             </p>
             <p className={styles.paragraph}>
               {language === "english"
-                ? "I love to write concise and clean code to bring both the technical and visual aspects of digital products to life, always with a strong attention to details!"
+                ? "I enjoy writing concise and clean code that brings digital products to life, integrating both technical and visual elements with a meticulous attention to details."
                 : "J'aime écrire du code concis et propre pour donner vie aux aspects techniques et visuels des produits numériques, toujours avec une grande attention aux détails!"}
             </p>
             <p className={styles.paragraph}>
