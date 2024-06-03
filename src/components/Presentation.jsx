@@ -8,13 +8,13 @@ function Presentation() {
     <section className={styles.container}>
       <h1 className={styles.title}>
         {language === "english"
-          ? "Hello, I'm Annie"
-          : "Bonjour, je m'appel Annie"}
+          ? "Hey there! I'm Annie"
+          : "Bonjour, je m'appelle Annie"}
       </h1>
       <p className={styles.paragraph}>
         {language === "english"
-          ? "A year ago, I embarked on a journey to transition from being an experienced project engineer for 9 years to an aspiring web developper. This project has been fueled by my growing passion for the digital universe and I have thoroughly enjoyed every step of the process thus far!"
-          : "Il y a de cela un an, j'ai décidée de m'investir dans une démarche de reconversion professionnelle. Partant de l'univers du génie civil dans lequel j'exerçais depuis 9 ans, j'ai décidé de poursuivre ma passion pour l'univers du numérique et d'entamer une formation afin de devenir développeuse web."}
+          ? "I was an engineer, I became a web developer and I love turning ideas to reality through coding.  "
+          : "Ingénieure reconvertie en développeuse web, j'utilise le code pour transformer les idées en réalité."}
       </p>
     </section>
   );

@@ -1,28 +1,50 @@
 @use "./Variables" as v;
 
 .window{
-    position: relative;
+    
+    background-color: v.$dark;
+    opacity: 0.9;
+    position:fixed;
+    top:0;
+    right:8px;
+    left:8px;
+    z-index: 10;
     
     .navBar {
-        height: 70px;
+        height: 80px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 0 1em;
-        
-        .logo{
-            font-family: Inria;
-            font-size:30px;
-            font-weight: 500;
-            margin-top:0.6em;
-            height:38px;
-            width:38px;
-            color: v.$beige;
-            border: solid 3px;
-            border-radius: 50%;
-            padding:8px;
-            text-align: center;
+      
+        position:relative;
+        padding: 0 1em;
+       
+        .info{
+            display:flex;
+            align-items: center;
+            gap:1.5em;
+            .logo{
+                font-family: Inria;
+                font-size:30px;
+                font-weight: 500;
+                // margin-top:0.6em;
+                height:38px;
+                width:38px;
+                color: v.$beige;
+                border: solid 3px;
+                border-radius: 50%;
+                padding:8px;
+                text-align: center;
+                
+            }
+            .contact{
+                font-family: Inria;
+                font-size: 1.3em;
+                color: v.$beige;
+            }
+
         }
+        
         
         .icons{
             display: flex;

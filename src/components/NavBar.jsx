@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
-import logo from "../assets/Images/logo.png";
 import { VscGithubAlt } from "react-icons/vsc";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { IoIosArrowDown } from "react-icons/io";
@@ -43,7 +42,20 @@ function NavBar() {
   return (
     <div className={styles.window}>
       <nav className={styles.navBar}>
-        <div className={styles.logo}>AC</div>
+        <div className={styles.info}>
+          <div className={styles.logo}>AC</div>
+          {!isMobile ? (
+            <div className={styles.contact}>anniecroteauc@gmail.com</div>
+          ) : (
+            ""
+          )}
+          {!isMobile ? (
+            <div className={styles.contact}>+33 6 23 67 15 29</div>
+          ) : (
+            ""
+          )}
+        </div>
+
         <div className={styles.icons}>
           {!isMobile ? (
             <a
@@ -126,7 +138,7 @@ function NavBar() {
               setMenuOpen(false);
             }}
           >
-            About me
+            {language == "english" ? "About me" : "A propos de moi"}
           </a>
           <a
             href="#projects"
@@ -135,7 +147,7 @@ function NavBar() {
               setMenuOpen(false);
             }}
           >
-            My projects
+            {language == "english" ? "My projects" : "Mes projets"}
           </a>
           <a
             className={styles.item}
@@ -143,7 +155,7 @@ function NavBar() {
               navigate("/resume");
             }}
           >
-            Resume
+            {language == "english" ? "Resume" : "CV"}
           </a>
           <a
             href="#contact"
@@ -152,7 +164,7 @@ function NavBar() {
               setMenuOpen(false);
             }}
           >
-            Contact me
+            {language == "english" ? "Contact me" : "Me contacter"}
           </a>
           {isMobile ? (
             <div
