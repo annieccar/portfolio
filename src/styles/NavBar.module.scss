@@ -1,60 +1,200 @@
 @use "./Variables" as v;
 
-.navBar {
-    height: 70px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 1em;
-    .image {
-        height: 70%;
-    }
-    .icons{
+.window{
+    
+    background-color: v.$dark;
+    opacity: 0.9;
+    position:fixed;
+    top:0;
+    right:8px;
+    left:8px;
+    z-index: 10;
+    
+    .navBar {
+        height: 80px;
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        gap: 2em;
-        height:100%;
-               
-        .icon {
-            color: v.$beige;
-            &:hover{
-                color:v.$peach;
-                cursor: pointer;
+      
+        position:relative;
+        padding: 0 1em;
+       
+        .info{
+            display:flex;
+            align-items: center;
+            gap:1.5em;
+            .logo{
+                font-family: Inria;
+                font-size:30px;
+                font-weight: 500;
+                // margin-top:0.6em;
+                height:38px;
+                width:38px;
+                color: v.$beige;
+                border: solid 3px;
+                border-radius: 50%;
+                padding:8px;
+                text-align: center;
+                
             }
-        } 
-        
-        .languageBox{
-            position:relative;
-            p{
-                font-family: "Inria";
+            .contact{
+                font-family: Inria;
                 font-size: 1.3em;
-                              
-            } 
-            .language{
-                display: flex;
-                align-items: center;
-                height: 100%;
+                color: v.$beige;
+            }
+
+        }
+        
+        
+        .icons{
+            display: flex;
+            align-items: center;
+            gap: 2em;
+            height:100%;
+                   
+            .icon {
                 color: v.$beige;
                 &:hover{
                     color:v.$peach;
                     cursor: pointer;
+                    transform: scale(1.1)
+                }
+            } 
+            
+            .languageBox{
+                position:relative;
+                p{
+                    font-family: "Inria";
+                    font-size: 1.3em;
+                                  
                 } 
-            }
-            .otherLanguage{
-                position: absolute;
-                transform: translateY(-1.5em);
-                color:v.$beige;
-                opacity:0.5;
-                &:hover{
-                    color: v.$peach;
-                    cursor: pointer;
+                .language{
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    color: v.$beige;
+                    &:hover{
+                        color:v.$peach;
+                        cursor: pointer;
+                        transform: scale(1.1)
+                    } 
+                }
+                .otherLanguage{
+                    position: absolute;
+                    transform: translateY(-1.5em);
+                    color:v.$beige;
+                    opacity:0.5;
+                    &:hover{
+                        color: v.$peach;
+                        cursor: pointer;
+                    }
                 }
             }
+           
+            .menu{
+                height:35%
+            }
         }
-       
-        .menu{
-            height:35%
+    
+    }
+    
+    .menu{
+        position: fixed;
+        inset:0;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(204,197,185,0.6), rgba(204,197,185,1) 60%) ;
+        display:flex;
+        flex-direction: column;
+        align-items: end;
+        justify-content: center;
+
+        .icons{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-right: 70px;
+            gap: 2em;
+                           
+            .icon {
+                color: v.$dark;
+                
+            } }
+
+        .item{
+            padding-right: 5em;
+            font-family: "Inria";
+            color: v.$dark;
+            font-size: 35px;
+            font-weight: 800;
+            width:fit-content;
+            text-decoration: none;
+           
+            &:hover{
+                cursor: pointer;
+                background: v.$peachGradient;
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                transform: scale(1.2);
+                transition: transform 0.3s ease;
+            }
+            margin: 0.3em 0;
+        }
+        .languageBox{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-right: 70px;
+            gap: 2em;
+            p{
+                font-family: "Inria";
+                font-size: 1.3em; 
+                font-weight: 700;             
+            } 
+            .language{
+                color: v.$peach;
+                           
+            }
+            .otherLanguage{
+                color:v.$dark;
+                opacity:0.5;
+              
+            }
         }
     }
+    .closeButton{
+        position: absolute;
+        z-index: 3;
+        top: 1em;
+        right:1em;
+        color: v.$dark;
+        &:hover{
+            cursor:pointer;
+            color: v.$peach;
+        }
 
+    }
+}
+
+@media (max-width: v.$bp-mobile) {
+    .window{
+        .navBar{
+            .logo{
+            font-size:22px;
+            font-weight: 500;
+            height:26px;
+            width:26px;
+         
+        }}
+        
+        .menu{
+            
+            background: linear-gradient(to right, rgba(204,197,185,0.8), rgba(204,197,185,1) 30%) ;
+            .item{
+                padding-right:2em;
+            }
+        }
+    }
 }

@@ -5,18 +5,46 @@
     display:flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 7em;
   
        
     .title{
         text-align: left;
-        font-size: 5em;
+        font-size: 6em;
        
     }
     .paragraph{
         font-family: "Inria";
-        font-size: 2em;
+        font-size: 4em;
         color:v.$beige;
-        width:70%;
-        margin-bottom: 5em; 
+        width:80%;
+        margin-bottom: 4.5em; 
     }
 }
+
+@media (max-width: v.$bp-laptop){
+    .container{  
+        .title{    
+            font-size: 4em;
+        }
+        .paragraph{
+            font-size: 3em;
+            margin-bottom: 4.5em; 
+        }
+    }
+}
+
+@media (max-width: v.$bp-mobile){
+    .container{ 
+        margin-top: 4em; 
+        .title{    
+            font-size: 40px;
+        }
+        .paragraph{
+            font-size: 1.2em;
+            margin-bottom: 4em; 
+        }
+    }
+}
+
+

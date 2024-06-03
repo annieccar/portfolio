@@ -1,11 +1,14 @@
 import "./styles/App.scss";
 import AppRoutes from "./routes/AppRoutes";
+import { LanguageContextProvider } from "./contexts/LanguageContext";
 
 function App() {
   return (
-    <div className="app-wrapper">
-      <AppRoutes />
-    </div>
+    <LanguageContextProvider>
+      <div className="app-wrapper">
+        <AppRoutes />
+      </div>
+    </LanguageContextProvider>
   );
 }
 

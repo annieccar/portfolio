@@ -13,19 +13,29 @@
         padding: 4em;
         .title{
             font-size: 60px;
-            margin-top: 0;
+            margin: 0;
         }
         .presentation{
             display: flex;
             width:100%;
-            .paragraph{
+            .presentationText{
+                width:65%;
+                .paragraph{
                 font-family: "Inria";
                 font-size: 25px;
                 padding-right:2em;
-                width:55%;
-            }
+                .link{
+                    text-decoration: underline;
+                    &:hover{
+                        cursor: pointer;
+                        color: v.$peach;
+                        }
+                    }
+                
+            }}
+            
             .imageContainer {
-                width: 45%;
+                width: 35%;
                 margin: auto;
                 border-radius: 50%;
                 .imageWrapper{
@@ -35,9 +45,7 @@
                     background-size: 100%;
                     border-radius: 50%;
              
-                    &:hover{
-                    cursor: pointer;
-                    }
+                   
                         .photo{
                             width:100%;
                             border-radius: 50%;
@@ -57,18 +65,62 @@
 
 @media (max-width: v.$bp-laptop){
     .section{
-        width: 80vw;
+        width: 70vw;
         .container{
+            .title{
+                font-size: 50px;
+              
+            }
             .presentation{
-                .paragraph{
-                    font-size: 22px;
-                    width: 65%;
+                .presentationText{
+                    width:60%;
+                    .paragraph{
+                        font-size: 18px;
+                        
+                    }
                 }
+                
                 .imageContainer{
-                    width: 35%;
+                    width: 40%;
                 }
             }
         }
        
     }
 }
+
+@media (max-width: v.$bp-tablet){
+    .section{
+        width: 90vw;
+        .container{
+            width:80%;
+            padding:2em 1em;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .title{
+                font-size: 40px;  
+            }
+            .presentation{
+                flex-direction: column-reverse;
+                align-items: center;
+                width:100%;
+                .presentationText{
+                    width:90%;
+                    .paragraph{
+                        font-size: 18px;
+                        text-align: center;
+                        padding-right: 0;
+                    }
+                }
+                
+                .imageContainer{
+                    width: 70%;
+                }
+            }
+        }
+       
+    }
+}
+

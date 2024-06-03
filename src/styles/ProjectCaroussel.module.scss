@@ -1,0 +1,79 @@
+@use "./Variables" as v;
+
+.imageContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 4em;
+           
+    .imageWrapper{
+        box-sizing: border-box;
+        width:100%;
+        position: relative;
+        border-radius: 10px;
+        overflow: hidden;
+        .photo{
+            width: 100%;
+            border-radius: inherit;
+            vertical-align: top;
+         
+            
+        }
+    }
+    .imageWrapper::after{
+        content:"";
+        position: absolute;
+        inset:0;
+        background: linear-gradient(to bottom, rgba(235,94,40,0.2) 30%, rgba(235,94,40,0.7) 70%) ;
+        z-index: 1;
+    }
+    .info{
+        position: absolute;
+        bottom:0;
+        left:1em;
+        z-index: 2;
+        .title{
+            font-family: "Inria";
+            color:v.$backgroundBeige;
+            font-weight: 700;
+            font-size: 18px;
+            margin:0;
+        }
+        .techContainer{
+            display:flex;
+            margin:0;
+            .techno{
+            font-family: "Inria";
+            color:v.$backgroundBeige;
+            font-weight: 700;
+            font-size: 12px;
+            margin-right: 1em;
+        }}
+        
+    }
+
+    
+  
+}
+
+@media (min-width: v.$bp-tablet){
+    .imageContainer {
+       
+        .info{
+            .title{
+                font-size: 30px;
+               
+            }
+            .techContainer{
+                .techno{
+                font-size: 18px;
+            }}
+            
+        }
+    
+        
+      
+    }
+}

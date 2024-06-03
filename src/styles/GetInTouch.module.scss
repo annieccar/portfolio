@@ -40,7 +40,7 @@
         .input{
             background-color: v.$backgroundBeige;
             border-radius: 10px;
-            width:100%;
+            width:90%;
             height:50px;
             padding:0 1em;
             border:none;
@@ -56,7 +56,7 @@
         .textArea{
             background-color: v.$backgroundBeige;
             border-radius: 10px;
-            width:100%;
+            width:90%;
             height:150px;
             padding:1em 1em;
             border:none;
@@ -90,6 +90,7 @@
                 cursor: pointer;
                 background: v.$peachGradient;
                 isolation: isolate;
+               
                            
               }
               .button::before{
@@ -99,6 +100,7 @@
                 inset:2px;
                 position: absolute;
                 z-index:-1;
+               
               }
               .button::after{
                 content: "Submit";
@@ -108,17 +110,21 @@
                 background: linear-gradient(to left, #EB5E28 0%, #F2A187 65.09%);
                 background-clip: text;
                 -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;   
+                -webkit-text-fill-color: transparent; 
+                 
               }
               .button:hover::before{
                 inset:0px;
                 opacity:0%;
-                
+                 
               }
               .button:hover::after{
                 -webkit-text-fill-color: v.$dark;
                 
+                
               }
+
+              
          
           
           
@@ -128,5 +134,80 @@
     
     }
 
+}
+
+@media (max-width: v.$bp-laptop){
+    .submissionConfirmation{
+        font-family: "Inria";
+        font-weight: 700;
+        background: linear-gradient(to right, #EB5E28 0%, #F2A187 65.09%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;   
+        font-size: 25px;
+        text-align: center;
+        margin-bottom: 3em;
+    }
+    .section{
+        width:600px;  
+        .title{
+            font-size: 50px;
+        }
+        .paragraph{
+            font-size: 20px;
+            margin-bottom: 2em;
+        }
+        .form { 
+            width: 350px;
+            .label{
+                font-size: 1.2em;
+                margin-bottom: 1em;
+            }
+            .input{
+                height:40px;
+                font-size: 18px;
+            }
+            .textArea{
+                height:100px;
+                font-size: 18px;
+            }
+            .error{
+                font-size: 18px;
+                margin-bottom:1em;
+            }
+            .buttonBox{
+                margin: 1em 0;
+                .button { 
+                    padding:0.5em 3em;      
+                  }
+                  .button::after{
+                    font-size: 20px;
+                  }
+            }
+        }
+    } 
+}
+
+@media (max-width: v.$bp-mobile){
+    .submissionConfirmation{
+        margin-bottom: 1em;
+    }
+    .section{
+        width:100vw;  
+        .title{
+            font-size: 40px;
+        }
+        .paragraph{
+            font-size: 18px;
+            margin-bottom: 2em;
+            width:80%;
+        }
+        .form { 
+            width: 80%;
+            .label{
+                font-size: 1em;
+            }            
+        }
+    } 
 }
 

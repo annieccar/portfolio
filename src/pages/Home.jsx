@@ -4,6 +4,7 @@ import Presentation from "../components/Presentation";
 import AboutMe from "../components/AboutMe";
 import Projects from "../components/Projects";
 import ContactForm from "../components/GetInTouch";
+import Footer from "../components/Footer";
 
 function Home() {
   const [count, setCount] = useState(0);
@@ -15,7 +16,8 @@ function Home() {
         <Presentation />
         <AboutMe />
         <Projects />
-        <ContactForm/>
+        <ContactForm />
+        <Footer />
       </div>
     </>
   );

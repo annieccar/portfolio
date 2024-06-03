@@ -1,14 +1,20 @@
+import { useLanguageContext } from "../contexts/LanguageContext";
 import styles from "../styles/Presentation.module.scss";
 
 function Presentation() {
+  const { language } = useLanguageContext();
+
   return (
     <section className={styles.container}>
-      <h1 className={styles.title}>Hello, I'm Annie</h1>
+      <h1 className={styles.title}>
+        {language === "english"
+          ? "Hey there! I'm Annie"
+          : "Bonjour, je m'appelle Annie"}
+      </h1>
       <p className={styles.paragraph}>
-        A year ago, I embarked on a transitional journey from being an
-        experienced project engineer to an aspiring web developper, fueled by a
-        passion and commitment to turn every challenge into an opportunity for
-        growth.
+        {language === "english"
+          ? "I was an engineer, I became a web developer and I love turning ideas to reality through coding.  "
+          : "Ingénieure reconvertie en développeuse web, j'utilise le code pour transformer les idées en réalité."}
       </p>
     </section>
   );
