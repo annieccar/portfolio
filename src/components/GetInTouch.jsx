@@ -30,7 +30,7 @@ function ContactForm() {
       </p>
       <form onSubmit={handleSubmit} className={styles.form}>
         <label htmlFor="name" className={styles.label}>
-          Full Name:
+          {language == "english" ? "Full Name:" : "Nom et prénom:"}
         </label>
         <input
           className={styles.input}
@@ -47,7 +47,7 @@ function ContactForm() {
           errors={state.errors}
         />
         <label htmlFor="email" className={styles.label}>
-          Email Address:
+          {language == "english" ? "Email address:" : "Adresse mail:"}
         </label>
         <input
           className={styles.input}
@@ -63,7 +63,7 @@ function ContactForm() {
           errors={state.errors}
         />
         <label htmlFor="message" className={styles.label}>
-          Your Message:
+          {language == "english" ? "Your message:" : "Votre message:"}
         </label>
         <textarea
           className={styles.textArea}
