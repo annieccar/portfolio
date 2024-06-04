@@ -47,7 +47,7 @@ function Projects() {
       "Ce projet est conçu pour reproduire les fonctionnalités principales d'une plateforme de streaming vidéo. Il inclut l'authentification des utilisateurs, une bibliothèque de contenu dynamique, une fonctionnalité de recherche, des playlists personnalisées et un design responsive pour tout type d'appareil.",
     technologies: ["React", "Tailwind", "Express", "MySQL", "Figma"],
     githubLink:
-      "https://github.com/WildCodeSchool/2023-05-JS-RemoteFR-LaBoulangerieDuCode-P3-origins-digital",
+      "https://github.com/annieccar/Project3-WildCodeSchool-Origins_Digital",
     siteLink: "https://origins-digital.anniec.eu/",
   };
 
