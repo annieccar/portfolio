@@ -9,6 +9,10 @@ import RF from "../assets/Images/EnregistrementReloadFestival.mp4";
 import RFM from "../assets/Images/EnregistrementReloadFestivalMobile.mp4";
 import TV from "../assets/Images/EnregistrementTuumVehiculum.mp4";
 import TVM from "../assets/Images/EnregistrementTuumVehiculumMobile.mp4";
+import imageRF from "../assets/Images/reloadFestival.png";
+import imageRFM from "../assets/Images/ReloadFestivalM.png";
+import imageTV from "../assets/Images/TuumVehiculumLT.png";
+import imageTVM from "../assets/Images/TuumVehiculum.png";
 import ProjectCardRight from "./ProjectCardRight";
 import ProjectCardLeft from "./ProjectCardLeft";
 
@@ -63,6 +67,8 @@ function Projects() {
   const ReloadFestival = {
     photo: RF,
     photoMobile: RFM,
+    image: imageRF,
+    imageMobile: imageRFM,
     type: "video",
     title: "Reload Festival",
     descriptionEnglish:
@@ -78,6 +84,8 @@ function Projects() {
   const TuumVehiculum = {
     photo: TV,
     photoMobile: TVM,
+    image: imageTV,
+    imageMobile: imageTVM,
     type: "video",
     title: "Tuum Vehiculum",
     descriptionEnglish:

@@ -23,7 +23,7 @@ function ProjectCaroussel({ projects }) {
             {project.type === "photo" ? (
               <img src={project.photo} className={styles.photo} />
             ) : (
-              <video controls className={styles.photo}>
+              <video controls poster={project.image} className={styles.photo}>
                 <source src={project.photo} type="video/mp4" />
                 Your browser does not support the video tag
               </video>

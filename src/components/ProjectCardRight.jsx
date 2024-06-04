@@ -9,6 +9,8 @@ import { FiExternalLink } from "react-icons/fi";
 function ProjectCardRight({
   photo,
   type,
+  image,
+  imageMobile,
   title,
   descriptionEnglish,
   descriptionFrench,
@@ -31,7 +33,7 @@ function ProjectCardRight({
               <img src={photo} className={styles.photo} />
             </a>
           ) : (
-            <video controls className={styles.photo}>
+            <video controls poster={image} className={styles.photo}>
               <source src={photo} type="video/mp4" />
               Your browser does not support the video tag
             </video>
