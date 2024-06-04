@@ -1,4 +1,4 @@
-import resume from "../assets/Files/CVAnnieC.pdf";
+import resume from "../assets/Files/CarignanAnnieCV.pdf";
 import styles from "../styles/Resume.module.scss";
 import { IoCloseCircleOutline } from "react-icons/io5";
 

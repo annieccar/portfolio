@@ -25,7 +25,11 @@ function ProjectCardMobile({ project, setProjectOpened }) {
             {project.type === "photo" ? (
               <img src={project.photo} className={styles.photo} />
             ) : (
-              <video controls className={styles.video}>
+              <video
+                controls
+                poster={project.imageMobile}
+                className={styles.video}
+              >
                 <source src={project.photoMobile} type="video/mp4" />
                 Your browser does not support the video tag
               </video>
