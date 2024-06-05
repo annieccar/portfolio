@@ -14,6 +14,9 @@ $beige: #ccc5B9;
 $peachGradient: linear-gradient(90deg, #EB5E28 0%, #F2A187 65.09%);
 $peach: #EB5E28;
 
+body{
+ margin:0; 
+}
 
 
 .app-wrapper {
@@ -21,6 +24,8 @@ $peach: #EB5E28;
     display: flex;
     flex-direction: column;
     background: $dark ;
+    margin:0;
+    padding:0;
    
   }
 

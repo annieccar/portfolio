@@ -34,6 +34,7 @@
         bottom:0;
         left:1em;
         z-index: 2;
+        width:90%;
         .title{
             font-family: "Inria";
             color:v.$backgroundBeige;
@@ -44,12 +45,15 @@
         .techContainer{
             display:flex;
             margin:0;
+            width:100%;
+            overflow-x: scroll;
             .techno{
             font-family: "Inria";
             color:v.$backgroundBeige;
             font-weight: 700;
             font-size: 12px;
             margin-right: 1em;
+            text-wrap: nowrap;
         }}
         
     }
