@@ -7,8 +7,6 @@ import ContactForm from "../components/GetInTouch";
 import Footer from "../components/Footer";
 
 function Home() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
       <NavBar />

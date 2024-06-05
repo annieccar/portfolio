@@ -5,7 +5,7 @@ const LanguageContext = createContext();
 const useLanguageContext = () => useContext(LanguageContext);
 
 function LanguageContextProvider({ children }) {
-  const [language, setLanguage] = useState("english");
+  const [language, setLanguage] = useState("français");
 
   const contextValue = useMemo(
     () => ({ language, setLanguage }),
