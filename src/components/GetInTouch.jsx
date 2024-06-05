@@ -25,7 +25,7 @@ function ContactForm() {
       <p className={styles.paragraph}>
         {language == "english"
           ? "If you’d like to collaborate with me or you just want to have a chat, don’t hesitate to contact me, I’ll get back to you as soon as I can"
-          : "Si vous souhaitez collaborer ou bien seulement discuter avec moi, n'hésitez pas à me contacter, je vous réponderai dès que possible"}
+          : "Si vous souhaitez collaborer ou simplement discuter avec moi, n'hésitez pas à me contacter, je vous réponderai dès que possible"}
         .
       </p>
       <form onSubmit={handleSubmit} className={styles.form}>

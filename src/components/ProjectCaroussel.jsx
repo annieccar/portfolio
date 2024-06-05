@@ -12,7 +12,7 @@ function ProjectCaroussel({ projects }) {
   };
 
   return (
-    <div>
+    <>
       {projects.map((project) => (
         <div
           className={styles.imageContainer}
@@ -50,7 +50,7 @@ function ProjectCaroussel({ projects }) {
         ""
       )}
       ;
-    </div>
+    </>
   );
 }
 
