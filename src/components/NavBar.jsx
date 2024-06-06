@@ -67,7 +67,7 @@ function NavBar() {
           ) : null}
           {!isMobile ? (
             <a
-              href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+              href="https://www.linkedin.com/in/annie-croteau-83725860/"
               className={styles.icon}
             >
               <SlSocialLinkedin size={30} />
@@ -122,7 +122,7 @@ function NavBar() {
             )}
             {isMobile ? (
               <a
-                href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
+                href="https://www.linkedin.com/in/annie-croteau-83725860/"
                 className={styles.icon}
               >
                 <SlSocialLinkedin size={30} />
