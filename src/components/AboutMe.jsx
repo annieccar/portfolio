@@ -23,7 +23,7 @@ function AboutMe() {
             </p>
             <p className={styles.paragraph}>
               {language === "english"
-                ? "About a year ago, I was still working as a civil Engineer, a career that I pursued for a decade. My growing interest for the digital universe, combined with my problem-solving skills, encouraged me to make a career change to Web Development. I have since completed a course to learn the foundation of both front-end and back-end development and earned my Web Development certification."
+                ? "About a year ago, I was still working as a civil Engineer, a career that I pursued for a decade. My growing interest for the digital universe, combined with my problem-solving skills, encouraged me to make a career change to Web Development.I have since completed a course to learn the foundation of both front-end and back-end development and earned my Web Development certification."
                 : "Il y a environ un an, je travaillais encore comme ingénieure civil, un métier que j'ai exercé pendant dix ans. Mon intérêt croissant pour l'univers du numérique, combiné à mes compétences en résolution de problèmes, m'ont encouragé à entreprendre une reconversion en développement Web. J'ai depuis suivi une formation pour apprendre les bases du développement front-end et back-end et obtenu mon titre professionnel développeur web et web mobile."}
             </p>
             <p className={styles.paragraph}>
