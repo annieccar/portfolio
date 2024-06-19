@@ -29,7 +29,7 @@ function ProjectCardLeft({
       >
         <div className={styles.imageWrapper}>
           {type === "photo" ? (
-            <a href={siteLink}>
+            <a href={siteLink} target="_blank">
               <img src={photo} className={styles.photo} />
             </a>
           ) : (
@@ -56,11 +56,11 @@ function ProjectCardLeft({
           ))}
         </div>
         <div className={styles.icons}>
-          <a className={styles.link} href={githubLink}>
+          <a className={styles.link} href={githubLink} target="_blank">
             <FiGithub size={25} />
           </a>
           {siteLink ? (
-            <a className={styles.link} href={siteLink}>
+            <a className={styles.link} href={siteLink} target="_blank">
               <FiExternalLink size={28} />
             </a>
           ) : (

@@ -13,8 +13,8 @@ function Presentation() {
       </h1>
       <p className={styles.paragraph}>
         {language === "english"
-          ? "I was an engineer, I became a web developer and I love turning ideas to reality through coding.  "
-          : "Ingénieure reconvertie en développeuse web, j'utilise le code pour transformer les idées en réalité."}
+          ? "I was an engineer, I became a web developer and I implement innovative and functional digital solutions, one line of code at a time."
+          : "Ingénieure reconvertie en développeuse web, je réalise des solutions numériques innovantes et fonctionnelles, une ligne de code à la fois."}
       </p>
     </section>
   );
