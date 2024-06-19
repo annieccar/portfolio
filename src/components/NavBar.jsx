@@ -61,6 +61,7 @@ function NavBar() {
             <a
               href="https://github.com/annieccar?tab=repositories"
               className={styles.icon}
+              target="_blank"
             >
               <VscGithubAlt size={30} />
             </a>
@@ -69,6 +70,7 @@ function NavBar() {
             <a
               href="https://www.linkedin.com/in/annie-croteau-83725860/"
               className={styles.icon}
+              target="_blank"
             >
               <SlSocialLinkedin size={30} />
             </a>
@@ -114,6 +116,7 @@ function NavBar() {
               <a
                 href="https://github.com/annieccar?tab=repositories"
                 className={styles.icon}
+                target="_blank"
               >
                 <VscGithubAlt size={30} />
               </a>
@@ -124,6 +127,7 @@ function NavBar() {
               <a
                 href="https://www.linkedin.com/in/annie-croteau-83725860/"
                 className={styles.icon}
+                target="_blank"
               >
                 <SlSocialLinkedin size={30} />
               </a>

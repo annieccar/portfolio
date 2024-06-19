@@ -51,11 +51,11 @@ function ProjectCardMobile({ project, setProjectOpened }) {
           ))}
         </div>
         <div className={styles.icons}>
-          <a className={styles.link} href={project.githubLink}>
+          <a className={styles.link} href={project.githubLink} target="_blank">
             <FiGithub size={25} />
           </a>
           {project.siteLink ? (
-            <a className={styles.link} href={project.siteLink}>
+            <a className={styles.link} href={project.siteLink} target="_blank">
               <FiExternalLink size={28} />
             </a>
           ) : (

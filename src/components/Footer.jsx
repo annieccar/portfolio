@@ -5,7 +5,7 @@ function Footer() {
   return (
     <section className={styles.container}>
       <p className={styles.paragraph}>
-        © 2023 Designed & built by Annie Croteau-Carignan
+        © 2024 Designed & built by Annie Croteau-Carignan
       </p>
     </section>
   );
