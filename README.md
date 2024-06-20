@@ -36,10 +36,13 @@ This is a portfolio project built using React. The purpose of this project is to
    git clone git@github.com:annieccar/portfolio.git
 
 2. Change to the project directory
+   
     cd your-repo
 
-3. Install the dependencies
+4. Install the dependencie
+   
      npm install
 
-4. Start the project
+6. Start the project
+   
     npm run dev
